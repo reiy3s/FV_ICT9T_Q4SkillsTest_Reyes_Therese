@@ -58,7 +58,7 @@
 
             <i><div id="display"></div></i><br>
 
-            <button type="button" class="btn btn-info" ondclick="GETIN()">Login</button>
+            <button type="button" class="btn btn-info" onclick="GETIN()">Login</button>
 
         <br><br></form>
     </div>
@@ -69,6 +69,7 @@
             let password = document.getElementById("pw").value;
                 if (user=="mikmikk" && password=="yawnn"){
                     alert("Welcome back, mikmikk!" );
+                    window.location.href = "notebooks.html"
                 }
 
                 else{
@@ -91,30 +92,7 @@
             break;
             }
         }
-        
-        function wrongpw(){
 
-        do {
-            if (user === "mikmikk" && pw === "yawnn") {
-                alert();
-                attempt_counter = 0; // reset after success
-                document.getElementById("rightpw").innerHTML = "Welcome back!";
-                window.location.href = "notebooks.html"; //go to second page
-                break; // stop loop
-            } else {
-                attempt_counter++;
-                document.getElementById("wrongpw").innerHTML =
-                    "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
-            }
-
-        } while (false); 
-
-        if (attempt_counter >= 3) {
-            alert("You've made too many errors bud! Maybe get yo memory checked...");
-            document.getElementById("").disabled = true; // lock button
-        }
-        }
-        
     </script>
     
 </body>
