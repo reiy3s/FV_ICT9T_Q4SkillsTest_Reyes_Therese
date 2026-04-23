@@ -29,10 +29,13 @@
 
     <div class="sidebar text-center">
       <br><br>
-      <div class="mt-4 text-light">Home</div>
-      <div class="mt-4 text-light">Notebooks</div>
-      <div class="mt-4 text-light">Files</div>
-      <div class="mt-4 text-light">Calendar</div>
+      <div class="mt-4 text-light home">Home</div>
+      <div class="mt-4 text-light vns">Notebooks</div>
+      <div class="mt-4 text-light files">Files</div>
+      <div class="mt-4 text-light calendar">Calendar</div>
+      <div class="mt-4 text-light logout">
+        <button type="button" class="btn" onclick="bye()">Log Out</button>
+      </div>
 
     </div>
 
@@ -93,6 +96,22 @@
     </div>
   
   </div>
+
+  <script>
+
+    function bye() {
+            let confirmLogout = confirm("Exit now?");
+            
+            if (confirmLogout) {
+                window.location.href = "index.html";
+            }
+        } 
+
+        function message(){
+            alert("Not available at this time.");
+        }
+
+  </script>
     
 </body>
 </html>
